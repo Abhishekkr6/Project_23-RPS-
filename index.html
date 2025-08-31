@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game - Cyberpunk Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyberpunk-bg">
+        <div class="scan-lines"></div>
+        <div class="particles"></div>
+    </div>
+    
+    <main class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">
+                <span class="glitch" data-text="Rock paper scissors">Rock paper scissors</span>
+            </h1>
+            <div class="subtitle">CYBERPUNK TOURNAMENT</div>
+        </header>
+
+        <section class="score-board">
+            <div class="score-panel">
+                <div class="score-item player-score">
+                    <span class="score-label">PLAYER</span>
+                    <span class="score-value" id="playerScore">0</span>
+                </div>
+                <div class="round-indicator">
+                    <span class="round-label">ROUND</span>
+                    <span class="round-value" id="currentRound">1</span>
+                    <span class="round-total">/ 5</span>
+                </div>
+                <div class="score-item computer-score">
+                    <span class="score-label">COMPUTER</span>
+                    <span class="score-value" id="computerScore">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-arena">
+            <div class="choice-display">
+                <div class="player-choice">
+                    <div class="choice-label">YOUR CHOICE</div>
+                    <div class="choice-icon" id="playerChoice">
+                        <span class="choice-placeholder">?</span>
+                    </div>
+                </div>
+                
+                <div class="vs-indicator">
+                    <span class="vs-text">VS</span>
+                    <div class="energy-beam"></div>
+                </div>
+                
+                <div class="computer-choice">
+                    <div class="choice-label">COMPUTER CHOICE</div>
+                    <div class="choice-icon" id="computerChoice">
+                        <span class="choice-placeholder">?</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-display" id="resultDisplay">
+                <div class="result-text"></div>
+                <div class="result-subtext"></div>
+            </div>
+        </section>
+
+        <section class="game-controls">
+            <div class="choice-buttons">
+                <button class="choice-btn" data-choice="rock">
+                    <span class="choice-symbol">🗿</span>
+                    <span class="choice-name">ROCK</span>
+                </button>
+                <button class="choice-btn" data-choice="paper">
+                    <span class="choice-symbol">📄</span>
+                    <span class="choice-name">PAPER</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors">
+                    <span class="choice-symbol">✂️</span>
+                    <span class="choice-name">SCISSORS</span>
+                </button>
+            </div>
+
+            <div class="action-buttons">
+                <button class="reset-btn" id="resetBtn">
+                    <span>RESET GAME</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="game-status" id="gameStatus">
+            <div class="status-text">Make your choice to begin...</div>
+        </section>
+    </main>
+
+    <div class="game-over-modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2 class="modal-title" id="modalTitle">GAME OVER</h2>
+            <p class="modal-result" id="modalResult">Result</p>
+            <p class="modal-description" id="modalDescription">Description</p>
+            <button class="new-game-btn" id="newGameBtn">NEW TOURNAMENT</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
